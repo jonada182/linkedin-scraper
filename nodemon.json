@@ -1,0 +1,6 @@
+{
+    "ignore": ["**/*.test.ts", "node_modules/", "coverage/"],
+    "watch": ["src/"],
+    "exec": "ts-node src/index.ts"
+  }
+  
