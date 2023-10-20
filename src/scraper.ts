@@ -37,11 +37,11 @@ export const scrapeLinkedInJobURL = async (
         // Find every list within the job description to retrieve the details/requirements
         let description: string[] = [];
         descriptionContainer.find("ul").each((_, ul) => {
-          let descriptionSection = `\n${$(ul).prev().text().trim()}\n`;
+          let descriptionSection = `${$(ul).prev().text().trim()}\n`;
           $(ul)
             .find("li")
             .each((_, li) => {
-              descriptionSection += `\n${$(li).text().trim()}`;
+              descriptionSection += `${$(li).text().trim()}\n`;
             });
           description.push(descriptionSection);
         });
