@@ -1,16 +1,13 @@
 import axios from "axios";
 import * as cheerio from "cheerio";
-import { JobPosting } from "./types";
 
 /**
  * Scrapes role, company, and details from a linkedin job url
  * @param url
  * @returns JobPosting
  */
-export const scrapeLinkedInJobURL = async (
-  url: string
-): Promise<JobPosting> => {
-  const jobPosting: JobPosting = {
+export const scrapeLinkedInJobURL = async (url) => {
+  const jobPosting = {
     role: "",
     company: "",
     details: "",
@@ -35,7 +32,7 @@ export const scrapeLinkedInJobURL = async (
         ).first();
 
         // Find every list within the job description to retrieve the details/requirements
-        let description: string[] = [];
+        let description = [];
         descriptionContainer.find("ul").each((_, ul) => {
           let descriptionSection = `${$(ul).prev().text().trim()}\n`;
           $(ul)

@@ -25,8 +25,7 @@ Build and run the Docker container: `docker compose up -d`
 
 #### Using npm
 
-1. To run the application in development mode: `npm run dev`
-2. To build the application for production: `npm run build`
+1. To run the application in development mode: `npm start`
 
 ### API Usage
 

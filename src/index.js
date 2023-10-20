@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import { scrapeLinkedInJobURL } from "./scraper";
+import { scrapeLinkedInJobURL } from "./scraper.js";
 
 // Start express application
 const app = express();
