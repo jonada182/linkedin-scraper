@@ -6,6 +6,12 @@ import { scrapeLinkedInJobURL } from "./scraper";
 const app = express();
 const port = 8000;
 
+// Start the express server
+
+app.listen(port, () => {
+  console.log(`App listening on port ${port}`);
+});
+
 const allowedOrigins = [
   "http://localhost:3000",
   "https://joncaraballo-cover-letter-ai.vercel.app",
@@ -41,8 +47,4 @@ app.get("/linkedin/job/:id", (req, res) => {
     });
 });
 
-// Start the express server
-
-app.listen(port, () => {
-  console.log(`App listening on port ${port}`);
-});
+export default app;
