@@ -4,7 +4,7 @@ import { scrapeLinkedInJobURL } from "./scraper";
 
 // Start express application
 const app = express();
-const port = 8000;
+const port = process.env.PORT || 8000;
 
 // Start the express server
 
